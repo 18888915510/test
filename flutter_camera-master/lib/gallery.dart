@@ -94,7 +94,7 @@ class _GalleryState extends State<Gallery> {
   }
 
   Future<List<FileSystemEntity>> _getAllImages() async {
-    final Directory extDir = await getApplicationDocumentsDirectory();
+    final Directory extDir = await getTemporaryDirectory();
     final String dirPath = '${extDir.path}/media';
     final myDir = Directory(dirPath);
     List<FileSystemEntity> _images;
